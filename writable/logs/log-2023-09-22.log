@@ -1,0 +1,1392 @@
+ERROR - 2023-09-22 11:02:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:02:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-22 11:02:54 --> Uncaught CodeIgniter\Exceptions\ConfigException: You must set an array with Proxy IP address key and HTTP header name value in Config\App::$proxyIPs. in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/HTTP/RequestTrait.php:69
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/app/Views/errors/html/error_exception.php(206): CodeIgniter\HTTP\Request->getIPAddress()
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Debug/Exceptions.php(266): include('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Debug/Exceptions.php(269): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Debug/Exceptions.php(147): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {mai
+in SYSTEMPATH/HTTP/RequestTrait.php on line 69.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-09-22 11:03:50 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:03:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:04:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:04:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:04:40 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:04:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:04:40 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:04:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:04:40 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:04:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:04:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:04:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:04:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:04:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:04:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:04:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:04:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:04:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:04:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:04:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:06:45 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:06:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:06:45 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:06:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:06:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:06:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:06:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:06:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:06:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:06:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:06:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:06:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:06:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'company_x', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:06:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:36 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:36 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:36 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:36 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:37 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:37 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:37 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:37 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:38:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:38:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-22 11:43:04 --> Invalid file: "admin/somefile/homeV.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/somefile/homeV.php')
+ 2 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('admin/somefile/homeV', [], true)
+ 3 APPPATH/Controllers/Home.php(14): view('admin/somefile/homeV')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->home()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-22 11:43:18 --> Invalid file: "admin/somefile/homeV.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/somefile/homeV.php')
+ 2 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('admin/somefile/homeV', [], true)
+ 3 APPPATH/Controllers/Home.php(14): view('admin/somefile/homeV')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->home()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:45:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:45:32 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 11:45:40 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 11:45:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-22 13:22:07 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'compny', 3306, '', 0)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /opt/lampp/htdocs/pankaj/company_x/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/pankaj/company_x/app/Controllers/News.php(15): App\Models\NewsModel->getNews()
+#7 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\News->index()
+#8 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /opt/lampp/htdocs/pankaj/company_x/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/pankaj/company_x/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-22 13:22:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
